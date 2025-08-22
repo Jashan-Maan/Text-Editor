@@ -5,7 +5,12 @@ const Summary = ({ input }) => {
   return (
     <div className="w-2/5 h-full flex flex-col  mt-1 items-center justify-start gap-4 py-8 px-4">
       <h2 className="text-3xl font-semibold">Summary</h2>
-      <p className="w-full wrap-break-word h-3/5 text-base p-4">{input}</p>
+      <p
+        id="scroll-bar"
+        className="w-full wrap-break-word h-3/5 text-base p-4 overflow-y-scroll"
+      >
+        {input}
+      </p>
       <div className="text-xl font-serif flex justify-between items-center gap-4 flex-wrap w-3/5">
         <p>Character Count: {input.length}</p>
         <p>Word Count: {wordCount}</p>

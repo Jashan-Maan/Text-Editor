@@ -10,7 +10,7 @@ let removeSpace = (input) => {
   return input.replace(/\s+/g, " ").trim();
 };
 
-let clearText = (input) => {
+let clearText = () => {
   return "";
 };
 
