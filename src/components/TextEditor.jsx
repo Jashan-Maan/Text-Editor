@@ -13,7 +13,7 @@ const TextEditor = () => {
   return (
     <>
       <div
-        className={`w-full h-screen ${styles}  flex flex-col justify-start items-center overflow-auto`}
+        className={`w-full min-h-screen ${styles}  flex flex-col justify-start items-center overflow-auto`}
       >
         <Navbar toggleDarkMode={toggleDarkMode} mode={darkMode} />
         <Editor />

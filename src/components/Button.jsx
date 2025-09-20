@@ -3,7 +3,7 @@ import React from "react";
 const Button = ({ func, children }) => {
   return (
     <button
-      className="bg-emerald-500 text-white m-2 py-2 px-4 rounded-lg shadow-md hover:bg-emerald-700 transition duration-200"
+      className="transform rounded-lg bg-emerald-600 px-4 py-2 text-white shadow-md transition-all duration-200 hover:scale-105 hover:bg-emerald-700"
       onClick={func}
     >
       {children}

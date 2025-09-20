@@ -4,30 +4,33 @@ import { functionalities } from "../helper/logic";
 
 const InputForm = ({ input, handleChange, handleSubmit, handleFunction }) => {
   return (
-    <>
-      <form
-        className="flex flex-col  mt-1 items-center justify-start w-2/4 h-full gap-4 py-8 px-4 "
-        onSubmit={handleSubmit}
+    <form
+      className="flex h-full w-full flex-col items-center justify-start gap-4"
+      onSubmit={handleSubmit}
+    >
+      <label
+        className="text-2xl font-semibold sm:text-3xl"
+        htmlFor="text-editor-textarea"
       >
-        <label className="text-3xl font-semibold" htmlFor="scroll-bar">
-          Enter your Text Here..
-        </label>
-        <textarea
-          className="w-full resize-none h-3/5 outline-none p-2 border border-gray-300 rounded-2xl shadow shadow-gray-500 focus:outline-none focus:ring-2 focus:border-emerald-500"
-          name="text-editor"
-          id="scroll-bar"
-          value={input}
-          onChange={handleChange}
-        ></textarea>
-        <div className="w-4/5 flex flex-wrap justify-between mt-5 items-center ">
-          {functionalities.map((item) => (
-            <Button key={item.title} func={() => handleFunction(item)}>
-              {item.title}
-            </Button>
-          ))}
-        </div>
-      </form>
-    </>
+        Enter your Text Here...
+      </label>
+      <textarea
+        className="w-full flex-grow resize-none rounded-lg border border-slate-700 px-3 py-2 placeholder-gray-400 shadow-inner focus:outline-none focus:ring-2 focus:ring-emerald-500"
+        name="text-editor"
+        id="text-editor-textarea"
+        value={input}
+        onChange={handleChange}
+        rows="10"
+      />
+
+      <div className="flex w-full flex-wrap justify-center gap-3">
+        {functionalities.map((item) => (
+          <Button key={item.title} func={() => handleFunction(item)}>
+            {item.title}
+          </Button>
+        ))}
+      </div>
+    </form>
   );
 };
 
